@@ -7,3 +7,7 @@ render((
     <App />
   </BrowserRouter>
 ), document.getElementById('root'));
+
+// export default GoogleApiComponent({
+//   apiKey: __GAPI_KEY__
+// })(Container)

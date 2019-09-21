@@ -22,6 +22,8 @@ import WorkIcon from '@material-ui/icons/Work';
 import Logo from './Logo';
 import IntroContainer from './IntroContainer';
 import Button from '@material-ui/core/Button'; //todo: routing
+import InteractiveMap from './InteractiveMap';
+import Link from '@material-ui/core/Typography'; //todo: routing
 
 const drawerWidth = 240;
 
@@ -168,8 +170,8 @@ function ResponsiveDrawer(props) {
         </Typography>
         <Divider />
         <Typography paragraph>
-            <br/>
-          More content will go here
+          <br/>
+          <InteractiveMap />
           <br />
         </Typography>
       </main>

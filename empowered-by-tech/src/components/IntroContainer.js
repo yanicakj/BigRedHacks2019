@@ -1,6 +1,9 @@
 import React from 'react';
 import { Container, Typography } from '@material-ui/core';
 import ZipInput from './ZipInput';
+import SignUpHomepageButton from './SignUpHomepageButton';
+import ExistingAccountHomepageLink from './ExistingAccountHomepageLink';
+
 
 const IntroContainer = () => (
     <Container fixed>
@@ -12,7 +15,11 @@ const IntroContainer = () => (
         <br />
         <div align='center'>
             <ZipInput />
+            <br />
+            <SignUpHomepageButton />
+            <ExistingAccountHomepageLink />
         </div>
+        
         <br />
         <br />
     </Container>

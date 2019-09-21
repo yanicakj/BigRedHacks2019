@@ -21,6 +21,7 @@ import FeedbackIcon from '@material-ui/icons/Feedback';
 import WorkIcon from '@material-ui/icons/Work';
 import Logo from './Logo';
 import IntroContainer from './IntroContainer';
+import { SignUpHomepageButton } from './SignUpHomepageButton';
 
 const drawerWidth = 240;
 

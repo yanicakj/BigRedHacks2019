@@ -21,7 +21,7 @@ import FeedbackIcon from '@material-ui/icons/Feedback';
 import WorkIcon from '@material-ui/icons/Work';
 import Logo from './Logo';
 import IntroContainer from './IntroContainer';
-import { SignUpHomepageButton } from './SignUpHomepageButton';
+import Link from '@material-ui/core/Typography'; //todo: routing
 
 const drawerWidth = 240;
 
@@ -76,7 +76,7 @@ function ResponsiveDrawer(props) {
       <List>
         <ListItem>
             <ListItemIcon><HomeIcon/></ListItemIcon>
-            <ListItemText primary='Home'></ListItemText>
+            <Link color='inherit'> Home </Link>
         </ListItem>
         <ListItem>
             <ListItemIcon><CodeIcon/></ListItemIcon>

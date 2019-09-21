@@ -4,13 +4,11 @@ import { Typography, Container, Button } from '@material-ui/core';
 
 const Logo = () => (
 
-        <Button>
-            <Container fixed>
-                <Typography variant='subtitle1'>
-                {'< Empowered'}
+        <Button fullWidth>
+            <Container fixed align='center'>
+                <h3>{'< Empowered'}
                 <br />
-                {'By Tech / >'}
-                </Typography>
+                {'By Tech / >'}</h3>
             </Container>
         </Button>
 

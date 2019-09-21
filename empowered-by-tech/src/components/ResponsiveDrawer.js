@@ -21,7 +21,7 @@ import FeedbackIcon from '@material-ui/icons/Feedback';
 import WorkIcon from '@material-ui/icons/Work';
 import Logo from './Logo';
 import IntroContainer from './IntroContainer';
-import Link from '@material-ui/core/Typography'; //todo: routing
+import Button from '@material-ui/core/Button'; //todo: routing
 
 const drawerWidth = 240;
 
@@ -71,32 +71,42 @@ function ResponsiveDrawer(props) {
     <div>
         <List>
             <ListItem><Logo /></ListItem>
-        </List>
-      <Divider />
-      <List>
-        <ListItem>
-            <ListItemIcon><HomeIcon/></ListItemIcon>
-            <Link color='inherit'> Home </Link>
-        </ListItem>
-        <ListItem>
-            <ListItemIcon><CodeIcon/></ListItemIcon>
-            <ListItemText primary='About Us'></ListItemText>
-        </ListItem>
-        <ListItem>
-            <ListItemIcon><WorkIcon/></ListItemIcon>
-            <ListItemText primary='Corporate Partners'></ListItemText>
-        </ListItem>
       </List>
       <Divider />
       <List>
+        <Button fullWidth>
+            <ListItem>
+                <ListItemIcon><HomeIcon/></ListItemIcon>
+                <ListItemText primary='Home'></ListItemText>
+            </ListItem>
+        </Button>
+        <Button fullWidth>
+            <ListItem>
+                <ListItemIcon><CodeIcon/></ListItemIcon>
+                <ListItemText primary='About Us'></ListItemText>
+            </ListItem>
+        </Button>
+        <Button fullWidth>
+            <ListItem>
+                <ListItemIcon><WorkIcon/></ListItemIcon>
+                <ListItemText primary='Corporate Partners'></ListItemText>
+            </ListItem>
+        </Button>
+      </List>
+      <Divider />
+      <List>
+      <Button fullWidth>
         <ListItem>
             <ListItemIcon><ContactSupportIcon/></ListItemIcon>
             <ListItemText primary='Contact Support'></ListItemText>
         </ListItem>
+        </Button>
+        <Button fullWidth>
         <ListItem>
             <ListItemIcon><FeedbackIcon/></ListItemIcon>
             <ListItemText primary='Feedback'></ListItemText>
         </ListItem>
+        </Button>
       </List>
     </div>
   );
@@ -120,7 +130,7 @@ function ResponsiveDrawer(props) {
           </Typography>
         </Toolbar>
       </AppBar>
-      <nav className={classes.drawer} aria-label="mailbox folders">
+      <nav className={classes.drawer} aria-label="main">
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Hidden smUp implementation="css">
           <Drawer

@@ -20,6 +20,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import FeedbackIcon from '@material-ui/icons/Feedback';
 import WorkIcon from '@material-ui/icons/Work';
 import Logo from './Logo';
+import IntroContainer from './IntroContainer';
 
 const drawerWidth = 240;
 
@@ -67,7 +68,9 @@ function ResponsiveDrawer(props) {
 
   const drawer = (
     <div>
-        <Logo />
+        <List>
+            <ListItem><Logo /></ListItem>
+        </List>
       <Divider />
       <List>
         <ListItem>
@@ -112,7 +115,7 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            <Logo />
+            
           </Typography>
         </Toolbar>
       </AppBar>
@@ -150,10 +153,13 @@ function ResponsiveDrawer(props) {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Typography paragraph>
-          Content will go here
+          <IntroContainer />
         </Typography>
+        <Divider />
         <Typography paragraph>
+            <br/>
           More content will go here
+          <br />
         </Typography>
       </main>
     </div>

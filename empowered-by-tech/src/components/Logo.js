@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import CodeIcon from '@material-ui/icons/Code';
-import { Typography } from '@material-ui/core';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { Typography, Container } from '@material-ui/core';
 
 const Logo = () => (
 
-    <React.Fragment>
-        <Typography variant="h6" color='inherit'>
-            {'<Empowered'}
-            <br />
-            {'By Tech />'}
+    <Container fixed>
+        <Typography variant="h6" color='inherit' align='left'>
+            {'< Empowered'}
         </Typography>
-    </React.Fragment>
+        <Typography variant="h6" color='inherit' align='center'>
+            {'By Tech / >'}
+        </Typography>
+    </Container>
 
 );
 

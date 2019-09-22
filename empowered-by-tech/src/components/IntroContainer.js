@@ -32,8 +32,8 @@ class IntroContainer extends Component {
                 </Typography>
                 <br />
                 <br />
-                <ZipInput onChange={this.checkZip}/>
                 <div align='center'>
+                <ZipInput onChange={this.checkZip}/>
                     <br />
                     { this.state.validZip ?
                     <SignUpHomepageButton /> : <DisabledSignUp /> }

@@ -128,9 +128,6 @@ function ResponsiveDrawer(props) {
       
       <CssBaseline />
         
-         
-        
-          
       <nav className={classes.drawer} aria-label="main">
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Hidden smUp implementation="css">
@@ -164,9 +161,7 @@ function ResponsiveDrawer(props) {
       </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Typography paragraph>
           <IntroContainer />
-        </Typography>
         <Divider />
         <Typography paragraph>
           <br/>

@@ -1,14 +1,12 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import InputBase from '@material-ui/core/InputBase';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import DirectionsIcon from '@material-ui/icons/Directions';
 
-const useStyles = makeStyles(theme => ({
+const classes = makeStyles(theme => ({
   root: {
     display: 'flex',
     alignItems: 'center',
@@ -27,20 +25,37 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function CustomizedInputBase() {
-  const classes = useStyles();
+class ZipInput extends Component {
 
-  return (
-    <Paper className={classes.root}>
-      <InputBase
-        className={classes.input}
-        placeholder="Enter Zipcode"
-        inputProps={{ 'aria-label': 'enter zip code' }}
-      />
-      <Divider className={classes.divider} orientation="vertical" />
-      <IconButton className={classes.iconButton} aria-label="search">
-        <SearchIcon />
-      </IconButton>
-    </Paper>
-  );
+    constructor(props){
+        super(props);
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(e) {
+        const input = e.target.value;
+        var zip = require('zippo')
+        
+        this.props.onChange(zip.validate(input));
+    }
+
+    render () {
+        return (
+            <Paper className={classes.root}>
+              <InputBase
+                className={classes.input}
+                placeholder="Enter Zipcode"
+                inputProps={{ 'aria-label': 'enter zip code' }}
+                onChange={this.handleChange}
+              />
+              <Divider className={classes.divider} orientation="vertical" />
+              <IconButton className={classes.iconButton} aria-label="search">
+                <SearchIcon />
+              </IconButton>
+            </Paper>
+          );
+    }
+  
 }
+
+export default ZipInput;

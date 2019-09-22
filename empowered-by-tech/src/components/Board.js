@@ -24,6 +24,7 @@ import Logo from './Logo';
 import BoardContainer from './BoardContainer';
 import Button from '@material-ui/core/Button'; //todo: routing
 import InteractiveMap from './InteractiveMap';
+import { Link } from 'react-router-dom'
 
 
 const drawerWidth = 240;
@@ -72,48 +73,36 @@ function Board(props) {
 
   const drawer = (
     <div>
-        <List>
-            <ListItem><Logo /></ListItem>
+      <List>
+        <ListItem component={Link} to='/'><Logo /></ListItem>
       </List>
       <Divider />
       <List>
-        <Button fullWidth href='/board/'>
+        <Button fullWidth component={Link} to='/board/'>
             <ListItem>
                 <ListItemIcon><HomeIcon/></ListItemIcon>
-                <ListItemText primary='Home'></ListItemText>
+                <ListItemText primary='Community Board'></ListItemText>
             </ListItem>
         </Button>
-        <Button fullWidth>
-            <ListItem>
-                <ListItemIcon><FindReplaceIcon/></ListItemIcon>
-                <ListItemText primary='Resources'></ListItemText>
-            </ListItem>
-        </Button>
-        <Button fullWidth>
-            <ListItem>
-                <ListItemIcon><DateRangeIcon /></ListItemIcon>
-                <ListItemText primary='Calendar'></ListItemText>
-            </ListItem>
-        </Button>
-        <Button fullWidth>
+        <Button fullWidth component={Link} to='/helpmap/'>
             <ListItem>
                 <ListItemIcon><WorkIcon/></ListItemIcon>
-                <ListItemText primary='Partnership'></ListItemText>
+                <ListItemText primary='Help Map'></ListItemText>
             </ListItem>
         </Button>
-        <Button fullWidth>
+        <Button fullWidth component={Link} to='/about/'>
             <ListItem>
                 <ListItemIcon><CodeIcon/></ListItemIcon>
                 <ListItemText primary='About Us'></ListItemText>
             </ListItem>
         </Button>
-      <Button fullWidth>
+      <Button fullWidth component={Link} to='/support/'>
         <ListItem>
             <ListItemIcon><ContactSupportIcon/></ListItemIcon>
             <ListItemText primary='Support'></ListItemText>
         </ListItem>
         </Button>
-        <Button fullWidth>
+        <Button fullWidth component={Link} to='/feedback/'>
         <ListItem>
             <ListItemIcon><FeedbackIcon/></ListItemIcon>
             <ListItemText primary='Feedback'></ListItemText>
@@ -124,7 +113,7 @@ function Board(props) {
   );
 
   return (
-      <React.Fragment>
+    <React.Fragment>
     <IconButton
     color="inherit"
     aria-label="open drawer"

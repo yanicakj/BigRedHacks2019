@@ -5,8 +5,8 @@ import Popup from "reactjs-popup";
 
 // to fit map into right side of screen
 const mapStyles = {
-  width: '78%',
-  height: '78%'
+  width: '74%',
+  height: '74%'
 };
 
 // currUser is lke our 'session'

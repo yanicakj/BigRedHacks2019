@@ -1,7 +1,7 @@
 import React, { Component } from 'react'; 
 import { Container, Typography } from '@material-ui/core';
 
-class BoardContainer extends Component {
+class AboutContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -13,9 +13,8 @@ class BoardContainer extends Component {
                 <br />
                 <br />
                 <Typography variant='h3' align='left'>
-                    Community Board
+                    About us
                 </Typography>
-                
                 
             </Container>
         );
@@ -24,4 +23,4 @@ class BoardContainer extends Component {
 
 
 
-export default BoardContainer;
+export default AboutContainer;

@@ -23,7 +23,6 @@ import Logo from './Logo';
 import IntroContainer from './IntroContainer';
 import Button from '@material-ui/core/Button'; //todo: routing
 import InteractiveMap from './InteractiveMap';
-import Link from '@material-ui/core/Typography'; //todo: routing
 
 const drawerWidth = 240;
 
@@ -59,7 +58,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function ResponsiveDrawer(props) {
+function Registration(props) {
   const { container } = props;
   const classes = useStyles();
   const theme = useTheme();
@@ -76,16 +75,10 @@ function ResponsiveDrawer(props) {
       </List>
       <Divider />
       <List>
-        <Button fullWidth to='/board/'>
+        <Button fullWidth>
             <ListItem>
                 <ListItemIcon><HomeIcon/></ListItemIcon>
                 <ListItemText primary='Home'></ListItemText>
-            </ListItem>
-        </Button>
-        <Button fullWidth>
-            <ListItem>
-                <ListItemIcon><WorkIcon/></ListItemIcon>
-                <ListItemText primary='Partnership'></ListItemText>
             </ListItem>
         </Button>
         <Button fullWidth>
@@ -94,10 +87,18 @@ function ResponsiveDrawer(props) {
                 <ListItemText primary='About Us'></ListItemText>
             </ListItem>
         </Button>
+        <Button fullWidth>
+            <ListItem>
+                <ListItemIcon><WorkIcon/></ListItemIcon>
+                <ListItemText primary='Corporate Partners'></ListItemText>
+            </ListItem>
+        </Button>
+      </List>
+      <List>
       <Button fullWidth>
         <ListItem>
             <ListItemIcon><ContactSupportIcon/></ListItemIcon>
-            <ListItemText primary='Support'></ListItemText>
+            <ListItemText primary='Contact Support'></ListItemText>
         </ListItem>
         </Button>
         <Button fullWidth>
@@ -171,7 +172,7 @@ function ResponsiveDrawer(props) {
   );
 }
 
-ResponsiveDrawer.propTypes = {
+Registration.propTypes = {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -179,4 +180,4 @@ ResponsiveDrawer.propTypes = {
   container: PropTypes.instanceOf(typeof Element === 'undefined' ? Object : Element),
 };
 
-export default ResponsiveDrawer;
+export default Registration;

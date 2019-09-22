@@ -27,7 +27,7 @@ class SignUpHomepageButton extends Component {
                     className={useStyles.button}
                     color='primary'
                     href='/register/'>
-                        Join my neighborhood!
+                        Join neighborhood
                     </Button>
             </div>
         );

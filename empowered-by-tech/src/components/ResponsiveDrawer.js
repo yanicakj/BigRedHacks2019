@@ -114,24 +114,23 @@ function ResponsiveDrawer(props) {
   );
 
   return (
+      <React.Fragment>
+    <IconButton
+    color="inherit"
+    aria-label="open drawer"
+    edge="start"
+    onClick={handleDrawerToggle}
+    className={classes.menuButton}
+  >
+    <MenuIcon />
+  </IconButton>
     <div className={classes.root}>
+      
       <CssBaseline />
-      <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            className={classes.menuButton}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap>
-            
-          </Typography>
-        </Toolbar>
-      </AppBar>
+        
+         
+        
+          
       <nav className={classes.drawer} aria-label="main">
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Hidden smUp implementation="css">
@@ -176,6 +175,7 @@ function ResponsiveDrawer(props) {
         </Typography>
       </main>
     </div>
+    </React.Fragment>
   );
 }
 

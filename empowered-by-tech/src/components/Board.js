@@ -14,16 +14,17 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import HomeIcon from '@material-ui/icons/Home';
 import MenuIcon from '@material-ui/icons/Menu';
-import Toolbar from '@material-ui/core/Toolbar';
+import DateRangeIcon from '@material-ui/icons/DateRange';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import FeedbackIcon from '@material-ui/icons/Feedback';
 import WorkIcon from '@material-ui/icons/Work';
+import FindReplaceIcon from '@material-ui/icons/FindReplace';
 import Logo from './Logo';
-import IntroContainer from './IntroContainer';
+import BoardContainer from './BoardContainer';
 import Button from '@material-ui/core/Button'; //todo: routing
 import InteractiveMap from './InteractiveMap';
-import Link from '@material-ui/core/Typography'; //todo: routing
+
 
 const drawerWidth = 240;
 
@@ -59,7 +60,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function ResponsiveDrawer(props) {
+function Board(props) {
   const { container } = props;
   const classes = useStyles();
   const theme = useTheme();
@@ -76,10 +77,22 @@ function ResponsiveDrawer(props) {
       </List>
       <Divider />
       <List>
-        <Button fullWidth to='/board/'>
+        <Button fullWidth href='/board/'>
             <ListItem>
                 <ListItemIcon><HomeIcon/></ListItemIcon>
                 <ListItemText primary='Home'></ListItemText>
+            </ListItem>
+        </Button>
+        <Button fullWidth>
+            <ListItem>
+                <ListItemIcon><FindReplaceIcon/></ListItemIcon>
+                <ListItemText primary='Resources'></ListItemText>
+            </ListItem>
+        </Button>
+        <Button fullWidth>
+            <ListItem>
+                <ListItemIcon><DateRangeIcon /></ListItemIcon>
+                <ListItemText primary='Calendar'></ListItemText>
             </ListItem>
         </Button>
         <Button fullWidth>
@@ -157,21 +170,16 @@ function ResponsiveDrawer(props) {
         </Hidden>
       </nav>
       <main className={classes.content}>
-        <div className={classes.toolbar} />
-          <IntroContainer />
-        <Divider />
-        <Typography paragraph>
-          <br/>
-          <InteractiveMap />
-          <br />
-        </Typography>
+        <div className={classes.content}>
+        <BoardContainer/>
+        </div>
       </main>
     </div>
     </React.Fragment>
   );
 }
 
-ResponsiveDrawer.propTypes = {
+Board.propTypes = {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -179,4 +187,4 @@ ResponsiveDrawer.propTypes = {
   container: PropTypes.instanceOf(typeof Element === 'undefined' ? Object : Element),
 };
 
-export default ResponsiveDrawer;
+export default Board;

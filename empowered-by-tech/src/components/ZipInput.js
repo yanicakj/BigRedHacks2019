@@ -47,7 +47,8 @@ class ZipInput extends Component {
             <div className={classes.root}>
               <TextField
                 className={classes.input}
-                placeholder="Enter Zipcode"
+                type="search"
+                label="Enter Zipcode"
                 inputProps={{ 'aria-label': 'enter zip code' }}
                 onChange={this.handleChange}
               >

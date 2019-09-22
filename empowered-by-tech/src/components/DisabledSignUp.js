@@ -20,7 +20,7 @@ class DisabledSignUp extends Component {
                 className={useStyles.button}
                 color='primary'
                 disabled>
-                    Join my neighborhood!
+                    Join neighborhood
                 </Button>
             </div>
         );

@@ -8,13 +8,14 @@ import DisabledSignUp from './DisabledSignUp';
 class IntroContainer extends Component {
     constructor(props) {
         super(props);
-        this.state = {validZip: false};
+        this.state = {validZip: false, entry: '' };
         this.checkZip = this.checkZip.bind(this);
     }
 
     checkZip(zipInput){
         this.setState({
-            validZip: zipInput
+            validZip: zipInput,
+            entry: this.props.entry
         });
     }
 
@@ -33,10 +34,10 @@ class IntroContainer extends Component {
                 <br />
                 <br />
                 <div align='center'>
-                <ZipInput onChange={this.checkZip}/>
+                <ZipInput entry={this.state.entry} onChange={this.checkZip}/>
                     <br />
                     { this.state.validZip ?
-                    <SignUpHomepageButton /> : <DisabledSignUp /> }
+                    <SignUpHomepageButton zipEntry={this.props.entry}/> : <DisabledSignUp /> }
                     <br />
                     <ExistingAccountHomepageLink />
                 </div>

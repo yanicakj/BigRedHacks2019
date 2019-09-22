@@ -22,7 +22,8 @@ import WorkIcon from '@material-ui/icons/Work';
 import Logo from './Logo';
 import IntroContainer from './IntroContainer';
 import Button from '@material-ui/core/Button'; //todo: routing
-import InteractiveMap from './InteractiveMap';
+import RegistrationContainer from './RegistrationContainer';
+import { Link } from 'react-router-dom'
 
 const drawerWidth = 240;
 
@@ -71,10 +72,16 @@ function Registration(props) {
   const drawer = (
     <div>
         <List>
-            <ListItem><Logo /></ListItem>
+        <ListItem component={Link} to='/'><Logo /></ListItem>
       </List>
       <Divider />
       <List>
+        <Button fullWidth>
+            <ListItem>
+                <ListItemIcon><HomeIcon/></ListItemIcon>
+                <ListItemText primary='Home'></ListItemText>
+            </ListItem>
+        </Button>
         <Button fullWidth>
             <ListItem>
                 <ListItemIcon><HomeIcon/></ListItemIcon>
@@ -159,13 +166,7 @@ function Registration(props) {
       </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-          <IntroContainer />
-        <Divider />
-        <Typography paragraph>
-          <br/>
-          <InteractiveMap />
-          <br />
-        </Typography>
+        <RegistrationContainer />
       </main>
     </div>
     </React.Fragment>

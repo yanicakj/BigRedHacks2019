@@ -19,16 +19,22 @@ function toRegister() {
 
 class SignUpHomepageButton extends Component {
 
+    constructor(props) {
+        super(props)
+    }
+
     render () {
         
         return (
             <div>
-                    <Button variant='contained' 
-                    className={useStyles.button}
-                    color='primary'
-                    href='/register/'>
-                        Join neighborhood
-                    </Button>
+                <Button variant='contained' 
+                className={useStyles.button}
+                color='primary'
+                href='/register/'
+                zipEntry={this.props.zipEntry}>
+                    Join neighborhood
+                </Button>
+
             </div>
         );
     };

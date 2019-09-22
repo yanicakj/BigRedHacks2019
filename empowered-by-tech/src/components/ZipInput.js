@@ -31,6 +31,7 @@ class ZipInput extends Component {
 
     constructor(props){
         super(props);
+        this.state = { entry: '' };
         this.handleChange = this.handleChange.bind(this);
 
     }
@@ -38,7 +39,7 @@ class ZipInput extends Component {
     handleChange(e) {
         const input = e.target.value;
         var zip = require('zippo')
-        
+        this.setState({entry: input})
         this.props.onChange(zip.validate(input));
     }
 

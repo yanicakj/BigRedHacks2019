@@ -11,6 +11,7 @@ import About from './About';
 const App = () => (
     <Router>
         <Route exact path="/" component={ResponsiveDrawer}/>
+        <Route path="/register/" component={Registration}/>
         <Route path="/board/" component={Board}/>
         <Route path="/helpmap/" component={HelpMap}/>
         <Route path="/about/" component={About}/>

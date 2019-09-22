@@ -1,6 +1,6 @@
 import React, {Component}  from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Button } from '@material-ui/core';
+import { Button, Tooltip } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
     button: {
@@ -15,14 +15,20 @@ class DisabledSignUp extends Component {
 
     render () {
         return (
-            <div>
-                <Button variant='contained' 
-                className={useStyles.button}
-                color='primary'
-                disabled>
-                    Join neighborhood
-                </Button>
-            </div>
+            
+                <Tooltip title="Enter a valid zipcode">
+                    <div>
+                <span>
+                    <Button variant='contained' 
+                    className={useStyles.button}
+                    color='primary'
+                    disabled>
+                        Join neighborhood
+                    </Button>
+                </span>
+                </div>
+                </Tooltip>
+           
         );
     };
 }

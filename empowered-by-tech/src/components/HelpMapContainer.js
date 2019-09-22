@@ -1,7 +1,8 @@
 import React, { Component } from 'react'; 
 import { Container, Typography } from '@material-ui/core';
+import InteractiveMap from './InteractiveMap';
 
-class BoardContainer extends Component {
+class HelpMapContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -13,10 +14,11 @@ class BoardContainer extends Component {
                 <br />
                 <br />
                 <Typography variant='h3' align='left'>
-                    Community Board
+                    Help Map
                 </Typography>
-                
-                
+                <br />
+                <br />
+                <InteractiveMap/>
             </Container>
         );
     }
@@ -24,4 +26,4 @@ class BoardContainer extends Component {
 
 
 
-export default BoardContainer;
+export default HelpMapContainer;

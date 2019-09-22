@@ -92,6 +92,9 @@ export class MapContainer extends Component {
        <div>
          <div>
          <h3>{this.state.currentSelection.details}</h3>
+		 <h3>{this.state.currentSelection.contact}</h3>
+		 <h3>{this.state.currentSelection.contactEmail}</h3>
+		 <h3>{this.state.currentSelection.contactPhone}</h3>
         </div>
       <Map
         google={this.props.google}

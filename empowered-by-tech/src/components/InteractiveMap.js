@@ -123,5 +123,5 @@ function getMarkersByUser(currUser, cb) {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyARKhbuBC9KvE8iDGbcA1Lwdo-RTrsuOXA'
+  apiKey: '~'
 })(MapContainer);

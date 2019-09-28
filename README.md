@@ -5,7 +5,7 @@ Repo for Big Red Hacks 2019
 
 Platform to help local communities build resilience to natural disasters and adverse events.
 
-*React* frontend. *Node.js & Express.js* backend supported by storage in *MongoDB Atlas*.
+*React* frontend. *Node.js & Express.js* backend supported by storage in *MongoDB Atlas*. Used Google Maps API to embed interactive map for users to find emergency resources in their immediate vicinity.
 
 ## Landing Page
 
